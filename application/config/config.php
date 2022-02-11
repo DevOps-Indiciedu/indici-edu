@@ -25,7 +25,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['system_db_name']	= 'indicied_indiciedu_gsimscom_gsims_system'; 
 
-$config['base_url'] = 'https://dev.indiciedu.com.pk/';
+$config['base_url'] = 'http://localhost:80/indici-edu/';
 
 /*
 |--------------------------------------------------------------------------
