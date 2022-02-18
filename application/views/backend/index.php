@@ -782,7 +782,9 @@
                                 <?php if(count($all_notifications)>0){ ?>
                                 <li id="unread_notifications_tab" class="tab-pane fade in active">
                                     <ul class="dropdown-menu-list scroller">
-                                  <?php foreach($num_of_notifications as $notification_row){ ?>
+                                  <?php foreach($num_of_notifications as $notification_row){
+                                    
+                                  ?>
                                   <li class="notification-success unread">
                                     <a onclick='notificationTrigger("<?php echo $notification_row['id'] ?>","<?php echo $notification_row['url'] ?>")'>
                                       <span class="pull-left image">
@@ -792,6 +794,9 @@
                                         <strong>
                                           <?php echo $notification_row['text'] ?>
                                         </strong>
+                                        <br>
+                                        <span style="color: powderblue;float: right;"><?php echo date('d-M-Y' , strtotime($notification_row['inserted_at'])); ?>
+                                        </span>
                                       </span>
                                     </a>
                                   </li>
@@ -800,7 +805,8 @@
                                 </li>
                                 <li id="all_notifications_tab" class="tab-pane fade in">
                                     <ul class="dropdown-menu-list scroller">
-                                      <?php foreach($all_notifications as $notification_row){ ?>
+                                      <?php foreach($all_notifications as $notification_row){
+                                      ?>
                                       <li class="notification-success unread">
                                         <a onclick='notificationTrigger("<?php echo $notification_row['id'] ?>","<?php echo $notification_row['url'] ?>")'>
                                           <span class="pull-left image">
@@ -810,6 +816,9 @@
                                             <strong>
                                               <?php echo $notification_row['text'] ?>
                                             </strong>
+                                            <br>
+                                            <span style="color: powderblue;float: right;"><?php echo date('d-M-Y' , strtotime($notification_row['inserted_at'])); ?>
+                                            </span>
                                           </span>
                                         </a>
                                       </li>
